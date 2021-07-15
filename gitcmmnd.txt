@@ -1,0 +1,68 @@
+pwd ====> show what directory are we in
+mkdir 'name' =====> Create a directory with the name 'name'
+cd 'name' ====> to change the default directory to the one we've created
+ls ====> show the current list of elements in our current directory
+touch index.html ===> creates a file in the folder 
+mv index.html aboutUs.html ===> renames the file
+cp 'name of the file' 'direction' ===> copy a file in a specific direction
+rm 'nameoffile' ===> delete a file 
+rm -rf "foldername" ===> delete a folder 
+
+git init ===> Initialize .git in a new project
+git init --help ===> Help
+git config --global user.name "Chris Ardon" ====> command to define our username
+git config --global user.email "rockrisbl@gmail.com" =====> command to define our email
+git config --global --list =====> command to check the information filled
+git log ===> History
+git log --oneline ===> History shorter
+git show 'commitID' ===> show commit details
+
+git add "nameoffile" ==> Add files to the staged area
+git add . ===> Add all the files (useful when working with a lot of files)
+git commit -m "message" ===> Add files to the commit area
+git checkout nameoffile ===> Undo the last modification
+git checkout . ===> Undo the last modification of all the files
+git checkout master ===> go back all the modifies
+git revert 'commitID' ===> it deletes the commit
+
+git reset --mixed 'ID of the previous commit' ===> Remove the commits from the history (check git status)
+git reset --soft 'ID of the previous commit' ===> Remove the commits from the history and put them into the stagged area
+git reset . ===> unstage the files
+git reset --hard 'ID of the previous commit' ===> It deletes permanently the commits
+
+
+
+	**Cloning a repository
+git clone https://github.com/ChrisArdon/github-demon.git
+git status ==> gives us the status of the folder
+
+git remote add origin 'link' ===> add to the web repository our project
+
+git push origin master ===> push the project
+git pull origin master ===> pull the project from github
+
+git branch 'branchname' ===> Create a new branch
+git checkout -b 'branchname2' ===> Also creates a new branch
+git checkout 'branchname' ===> switch to a selected branch
+git branch -D 'branchname' ===> Delete a branch
+git pull origin 'branchname1' ===> pull a branch from github and all the commits made by it
+git checkout --track origin/branchname1 ===> use the pulled branch
+git push origin --delete 'branchname' ===> delete a branch in github from gitbash 
+
+git merge 'branchname' ===> merge a brand with master (fast forward merge)
+git merge --abort ===> stop merging, specially when theres is a merge conflict
+
+git rebase 'branchname' ===> rebase a branch
+
+alias g='git'
+alias v='vagrant'
+alias d='docker'
+alias gpom='git push origin master'
+alias grom='git reset --hard origin/master'
+
+git config --global alias.ll 'log --oneline'
+git config --global alias.last 'log -1 HEAD --stat' ===> git last commit
+ git config --global alias.cm 'commit -m' ===> git commit
+git config --global alias.gl 'config --global -l' ===> Git config list
+
+git config --global alias.cmam 'commit -am'
